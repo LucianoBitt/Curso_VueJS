@@ -22,6 +22,14 @@
                     'Maior ou igual a 5' : 'Menor que 5'
             }
         },
+        watch: {
+            contador(novo, antigo) {
+                setTimeout(() => {
+                    this.contador = 0
+                }, 2000)
+
+            }
+        },
         methods: {
             aumentar() {
                 this.contador++
