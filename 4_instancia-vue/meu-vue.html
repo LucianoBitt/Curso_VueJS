@@ -2,7 +2,7 @@
 
 <div id="app">
 
-    {{ nome }} {{ sobrenome }} {{ 100 - 54 }} {{ Math.pow(2, 3) }}
+    {{ nome }} {{ sobrenome }} {{ 100 - 54 }}
 </div>
 
 <script>
@@ -22,7 +22,7 @@
         }
 
         // interpolar
-        const regex = /\{\{([\s\w)(,.+*-]*)\}\}/g
+        const regex = /\{\{([\s\w+*-]*)\}\}/g
         this.$el.innerHTML = this.$el.innerHTML.replace(regex, (Math, $1) => {
             const value = this[$1.trim()]
             return value ? value : eval($1)
