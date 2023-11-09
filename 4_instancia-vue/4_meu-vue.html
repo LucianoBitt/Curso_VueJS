@@ -3,6 +3,7 @@
 <div id="app">
 
     {{ nome }} {{ sobrenome }} {{ 100 - 54 }}
+
 </div>
 
 <script>
@@ -12,6 +13,7 @@
 
         for (let atr in this.$data) {
             Object.defineProperty(this, atr, {
+
                 get: () => {
                     return this.$data[atr]
                 },
