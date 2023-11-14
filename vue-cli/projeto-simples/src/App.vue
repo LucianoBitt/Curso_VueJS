@@ -9,7 +9,7 @@
 export default {
   data: function () {
     return {
-      titulo: 'Teste Data usando Vue JS!!'
+      titulo: 'Teste Data Usando Vue JS!!'
     }
   }
 }
