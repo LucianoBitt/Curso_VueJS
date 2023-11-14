@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     {{ titulo }}
-    <v-btn color="secondary" @click="titulo += ' #'">Alterar</v-btn>
+    <v-btn @click="titulo += ' #'">Alterar</v-btn>
   </div>
 </template>
 
@@ -17,7 +17,7 @@ export default {
 
 <style>
 #app {
-  /* background-color: chocolate; */
-  /* color: white; */
+  background-color: chocolate;
+  color: white;
 }
 </style>
