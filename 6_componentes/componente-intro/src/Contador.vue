@@ -26,13 +26,13 @@ export default {
 </script>
 
 <style>
-	.contador span {
+	span {
 		border-bottom: 2px solid rgba(0, 4, 255, 0.26);
 		height: 30px;
 		padding: 5px 22px;
 	}
 
-	.contador button {
+	button {
 		height: 30px;
 		width: 30px;
 		border-radius: 15px;
