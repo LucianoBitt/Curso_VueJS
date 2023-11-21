@@ -1,20 +1,14 @@
 <template>
   <div id="app">
-    <h1>Contadores</h1>
-    <app-contador />
+    <app-contadores />
     <hr>
-    <app-contador />
-    <hr>
-    <app-contador />
-    <hr>
-    <app-contador />
-    <hr>
+    <button>?</button>
   </div>
 </template>
 
 <script>
 export default {
-  
+
 }
 </script>
 
