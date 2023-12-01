@@ -17,11 +17,12 @@ export default {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        border: 1px solid #DDD;
-        height: 200px;
+        border: 3px solid #DDD;
+        height: 100px;
         width: 200px;
         border-radius: 100px;
-    }
+        margin: auto;
+        }
 
     p {
         margin: 0;

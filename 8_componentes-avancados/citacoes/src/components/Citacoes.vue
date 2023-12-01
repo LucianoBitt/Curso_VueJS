@@ -5,7 +5,9 @@
             <button @click="numero++">&gt;</button>
         </span>
         <Citacao>
-            <p>{{ citacoes[indice].texto }}</p>
+            <h1 slot="autor"> {{ citacoes[indice].autor }}</h1>
+            <p slot="texto">{{ citacoes[indice].texto }}</p>
+            <h6 slot="fonte"> {{ citacoes[indice].fonte }}</h6>
         </Citacao>
     </div>
 </template>
@@ -19,17 +21,17 @@ export default {
         return {
             numero: 0,
             citacoes: [{
-                fonte: 'Jornal do Empreendedor',
-                texto: 'Lembre-se sempre que você é absolutamente único. Assim como todos os outros.',
-                autor: 'Margaret Mead'
+                fonte: 'Fonte: Pensador',
+                texto: `A persistência é o caminho do êxito.`,
+                autor: 'Charles Chaplin'
             }, { 
-                fonte: 'Frases de Mãe',
-                texto: 'Isso não é um quarto, é um chiqueiro.',
-                autor: 'Roberta'
+                fonte: 'Fonte: Frases de Motivação',
+                texto: `Por trás de um dia difícil, há uma versão forte de você que sempre seguiu em frente.`,
+                autor: 'Pensador'
             }, {
-                fonte: 'Frases de Pai',
-                texto: 'Vou contar até 3! 1, 2, 3...',
-                autor: 'Gustavo'
+                fonte: 'Fonte: Frases de Motivação',
+                texto: `Pare de se importar com as opiniões alheias. Se eu ouvisse tudo o que me diziam, não teria conseguido deixar de ser camelô para me tornar banqueiro.`,
+                autor: 'Silvio Santos'
             }]
         }
     },
@@ -37,6 +39,18 @@ export default {
         indice() {
             return Math.abs(this.numero % 3)
         }
+    },
+    creatad() {
+        console.log('created');
+    },
+    destroyed() {
+        console.log('destroyed');
+    },
+    activated() {
+        console.log('activated');
+    },
+    deactivated() {
+        console.log('deactivated');
     }
 }
 </script>
@@ -46,5 +60,18 @@ export default {
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-bottom: auto;
+    }
+
+    h1 {
+        color: rgba(0, 204, 255, 0.753);
+    }
+
+    p {
+        color: rgb(0, 255, 200)
+    }
+
+    h6 {
+        color: rgba(0, 204, 255, 0.753);
     }
 </style>
