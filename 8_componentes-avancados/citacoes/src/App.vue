@@ -1,7 +1,12 @@
 <template>
 	<div id="app">
-		<Citacoes />
-		<Sobre />
+		<span>
+			<button @click="componente = 'Citacoes'">Citações</button>
+			<button @click="componente = 'Sobre'">Sobre</button>
+		</span>
+		<keep-alive>
+			<component :is="componente" />
+		</keep-alive>
 	</div>
 </template>
 
@@ -10,7 +15,12 @@ import Citacoes from '@/components/Citacoes'
 import Sobre from '@/components/Sobre'
 
 export default {
-	components: { Citacoes, Sobre }
+	components: { Citacoes, Sobre },
+	data() {
+		return { 
+			componente: 'Citacoes'
+		}
+	}
 }
 </script>
 
@@ -20,7 +30,7 @@ export default {
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		height: 100vh;
+		height: 98vh;
 		font-size: 1.6rem;
 	}
 
@@ -28,7 +38,7 @@ export default {
         outline: none;
         padding: 5px 15px 10px;
         margin: 10px 5px;
-        border-radius: 3px;
+        border-radius: 8px;
         font-size: 2rem;
         font-weight: 300;
         color: #FFF;

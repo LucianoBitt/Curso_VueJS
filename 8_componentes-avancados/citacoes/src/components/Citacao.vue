@@ -1,6 +1,8 @@
 <template>
     <div class="citacao">
-    
+        <slot name="autor"></slot>
+        <slot name="texto"></slot>
+        <slot name="fonte"></slot>
     </div>
 </template>
 
@@ -12,9 +14,9 @@ export default {
 
 <style scoped>
     .citacao {
-        border: 1px solid #DDD;
+        border: 5px solid #DDD;
         background-color: rgba(0, 0, 0, .1);
         padding: 25px;
-        max-width: 450px;
+        max-width: 800px;
     }
 </style>
