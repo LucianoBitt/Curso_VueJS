@@ -24,7 +24,7 @@ export default {
 		alterarNome(event) {
 			this.$emit('input', { nome: event.target.value, sobrenome: this.value.sobrenome })
 		},
-		alterarSobrenome(event) {
+		alterarsobrenome(event) {
 			this.$emit('input', { nome: this.value.nome, sobrenome: event.target.value })
 		},
 	}

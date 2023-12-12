@@ -43,8 +43,8 @@
 </template>
 
 <script>
-import Rotulo from '@/components/Rotulo.vue'
-import NomeCompleto from '@/components/NomeCompleto.vue'
+import Rotulo from './components/Rotulo.vue'
+import NomeCompleto from './components/NomeCompleto.vue'
 
 export default {
 	name: 'app',

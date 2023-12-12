@@ -4,8 +4,13 @@
 		<div class="conteudo">
 			<form class="painel" v-if="!enviado">
 				<div class="cabecalho">Formulário</div>
-					<NomeCompleto v-model="nomeCompleto" />
-					<rotulo nome="E-mail">
+					<rotulo nome="Nome">
+						<input type="text" v-model="nome">
+					</rotulo>
+					<rotulo nome="Sobrenome">
+						<input type="text" v-model="sobrenome">
+					</rotulo>
+					<rotulo nome="Email">
 						<input type="text" v-model="email">
 					</rotulo>
 					<rotulo nome="Senha">
@@ -22,13 +27,13 @@
 			</form>
 			<div class="painel" v-else>
 				<div class="cabecalho">Resultado</div>
-				<rotulo nome="Nome">
-					<span>{{ nomeCompleto.nome }}</span>
+				<rotulo nome="Nome?">
+					<span>{{ nome }}</span>
 				</rotulo>
 				<rotulo nome="Sobrenome">
-					<span>{{ nomeCompleto.sobrenome }}</span>
+					<span>{{ sobrenome }}</span>
 				</rotulo>
-				<rotulo nome="E-mail">
+				<rotulo nome="Email">
 					<span>{{ email }}</span>
 				</rotulo>
 				<rotulo nome="Senha">
@@ -43,19 +48,16 @@
 </template>
 
 <script>
-import Rotulo from '@/components/Rotulo.vue'
-import NomeCompleto from '@/components/NomeCompleto.vue'
+import Rotulo from './components/Rotulo.vue'
 
 export default {
 	name: 'app',
-	components: { NomeCompleto, Rotulo },
+	components: { Rotulo },
 	data() {
 		return {
 			enviado: false,
-			nomeCompleto: {
-				nome: '',
-				sobrenome: '',				
-			},
+			nome: '',
+			sobrenome: '',
 			email: '',
 			senha: '',
 			armazenarDados: true
