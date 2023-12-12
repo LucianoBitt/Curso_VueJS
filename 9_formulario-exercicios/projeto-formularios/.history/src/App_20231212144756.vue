@@ -158,7 +158,7 @@ body {
 	font-size: 1.4rem;
 }
 
-.painel button {
+#app form button {
 	float: right;
 	margin: 10px 0px;
 	padding: 10px 20px;

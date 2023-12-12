@@ -48,7 +48,7 @@ export default {
     }
 
     .desligado .botao {
-        left: -10px;
+        left: -15px;
     }
 
     .ligado .botao {

@@ -48,12 +48,12 @@ export default {
     }
 
     .desligado .botao {
-        left: -10px;
+        left: -15px;
     }
 
     .ligado .botao {
         background-color: #255ca9;
         align-self: flex-end;
-        left: 15px;
+        left: 18px;
     }
 </style>

@@ -1,8 +1,8 @@
 <template>
     <div class="escolha"
-        @click="$emit('input', !value)"
+        @click="value = !value"
         :class="{ligado: value, desligado: !value}">
-        <div class="botao"></div>
+        <div v-else class="botao"></div>
     </div>
 </template>
 
@@ -54,6 +54,5 @@ export default {
     .ligado .botao {
         background-color: #255ca9;
         align-self: flex-end;
-        left: 15px;
     }
 </style>

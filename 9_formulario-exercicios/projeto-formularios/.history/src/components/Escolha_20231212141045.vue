@@ -53,7 +53,6 @@ export default {
 
     .ligado .botao {
         background-color: #255ca9;
-        align-self: flex-end;
-        left: 15px;
+        align-self: auto;
     }
 </style>
