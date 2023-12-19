@@ -36,8 +36,7 @@ export default {
 	},
 	data() {
 		return {
-			cpfDoUsuario: '08415504764',
-			frutas: ['morango']
+			cpfDoUsuario: '08415504764'
 		}
 	}
 }
