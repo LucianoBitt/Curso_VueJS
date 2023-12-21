@@ -10,6 +10,9 @@
 		<hr>
 		<p>{{ fraseComVirgulas }}</p>
 		<p>{{ fraseComTamanhos }}</p>
+
+		<!-- Exercício 4 -->
+		<!-- Compartilhe a propriedade computada via mixin -->
 	</div>
 </template>
 

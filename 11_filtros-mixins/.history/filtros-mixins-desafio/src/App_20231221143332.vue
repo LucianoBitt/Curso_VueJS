@@ -10,6 +10,9 @@
 		<hr>
 		<p>{{ fraseComVirgulas }}</p>
 		<p>{{ fraseComTamanhos }}</p>
+
+		<!-- Exercício 4 -->
+		<!-- Compartilhe a propriedade computada via mixin -->
 	</div>
 </template>
 
@@ -17,7 +20,6 @@
 import frasesMixin from '@/frasesMixin'
 
 export default {
-	mixins: [frasesMixin],
 	data() {
 		return {
 			frase: 'Essa é a frase usada nos desafios.'

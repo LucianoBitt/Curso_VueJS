@@ -10,14 +10,14 @@
 		<hr>
 		<p>{{ fraseComVirgulas }}</p>
 		<p>{{ fraseComTamanhos }}</p>
+
+		<!-- Exercício 4 -->
+		<!-- Compartilhe a propriedade computada via mixin -->
 	</div>
 </template>
 
 <script>
-import frasesMixin from '@/frasesMixin'
-
 export default {
-	mixins: [frasesMixin],
 	data() {
 		return {
 			frase: 'Essa é a frase usada nos desafios.'
@@ -26,6 +26,14 @@ export default {
 	filters: {
 		espacoPorVirgula(valor) {
 			return valor.replace(/\s/g, ',')
+		}
+	},
+	computed: {
+		fraseComVirgulas() {
+			return this.frase.replace(/\s/g, ',')
+		},
+		fraseComTamanhos() {
+			return this.frase.split(' ').map(p => `${p} (${p.length})`).join(' ')
 		}
 	}
 }
