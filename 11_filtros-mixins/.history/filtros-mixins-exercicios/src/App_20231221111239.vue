@@ -41,7 +41,7 @@ export default {
 		}
 	},
 	created() {
-        console.log('Created - App.vue!');
+        console.log('Creatad - Usuário Mixin!');
     }
 }
 </script>

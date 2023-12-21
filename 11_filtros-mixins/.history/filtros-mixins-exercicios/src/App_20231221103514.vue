@@ -39,10 +39,7 @@ export default {
 			cpfDoUsuario: '08415504764',
 			frutas: ['morango']
 		}
-	},
-	created() {
-        console.log('Created - App.vue!');
-    }
+	}
 }
 </script>
 

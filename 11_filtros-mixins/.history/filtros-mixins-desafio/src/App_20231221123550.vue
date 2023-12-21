@@ -7,9 +7,12 @@
 		<hr>
 		<p>{{ frase | contar-palavras }}</p>
 		<p>{{ frase | contarPalavras }}</p>
+
+		<!-- Exercício 3 -->
+		<!-- Implementar os exercicios 1 e 2 com propriedade computada -->
 		<hr>
-		<p>{{ fraseComVirgulas }}</p>
-		<p>{{ fraseComTamanhos }}</p>
+		<p>{{ frase | contar-palavras }}</p>
+		<p>{{ frase | contarPalavras }}</p>
 
 		<!-- Exercício 4 -->
 		<!-- Compartilhe a propriedade computada via mixin -->
@@ -27,14 +30,6 @@ export default {
 		espacoPorVirgula(valor) {
 			return valor.replace(/\s/g, ',')
 		}
-	},
-	computed: {
-		fraseComVirgulas() {
-			return this.frase.replace(/\s/g, ',')
-		},
-		fraseComTamanhos() {
-			return this.frase.split(' ').map(p => `${p} (${p.length})`).join(' ')
-		}
 	}
 }
 </script>
@@ -47,6 +42,6 @@ export default {
 	text-align: center;
 	color: #2c3e50;
 	margin-top: 60px;
-	font-size: 1.5rem;
+	font-size: 2.5rem;
 }
 </style>

@@ -8,11 +8,6 @@ Vue.filter('inverter', function(valor) {
 })
 
 Vue.mixin({
-    data() {
-        return {
-            global: 'Estou no Mixin Global!'
-        }
-    },
     created() {
         console.log('Created - Mixin Global!');
     }
@@ -21,6 +16,6 @@ Vue.mixin({
 new Vue({
     render: h => h(App),
     created() {
-        console.log('Created - Vue Instance!');
+        console.log('Created - Mixin Global!');
     }
 }).$mount('#app')

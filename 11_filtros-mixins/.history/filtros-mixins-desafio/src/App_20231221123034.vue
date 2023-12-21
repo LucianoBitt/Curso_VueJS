@@ -4,12 +4,17 @@
 		<hr>
 		<p>{{ frase | espaco-por-virgula }}</p>
 		<p>{{ frase | espacoPorVirgula }}</p>
+		
+		<!-- Exercício 2 -->
+		<!-- Filtro global que conta o tamanho de cada palavra e adiciona o 
+			valor na string final -->
+		<!-- "Pedro é legal" => "Pedro (5) é (1) legal (5)" -->
 		<hr>
 		<p>{{ frase | contar-palavras }}</p>
 		<p>{{ frase | contarPalavras }}</p>
-		<hr>
-		<p>{{ fraseComVirgulas }}</p>
-		<p>{{ fraseComTamanhos }}</p>
+
+		<!-- Exercício 3 -->
+		<!-- Implementar os exercicios 1 e 2 com propriedade computada -->
 
 		<!-- Exercício 4 -->
 		<!-- Compartilhe a propriedade computada via mixin -->
@@ -27,14 +32,6 @@ export default {
 		espacoPorVirgula(valor) {
 			return valor.replace(/\s/g, ',')
 		}
-	},
-	computed: {
-		fraseComVirgulas() {
-			return this.frase.replace(/\s/g, ',')
-		},
-		fraseComTamanhos() {
-			return this.frase.split(' ').map(p => `${p} (${p.length})`).join(' ')
-		}
 	}
 }
 </script>
@@ -47,6 +44,6 @@ export default {
 	text-align: center;
 	color: #2c3e50;
 	margin-top: 60px;
-	font-size: 1.5rem;
+	font-size: 2.5rem;
 }
 </style>

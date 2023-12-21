@@ -4,7 +4,7 @@ import App from './App.vue'
 Vue.config.productionTip = false
 
 Vue.filter('contarPalavras', function(valor) {
-    return valor.split(' ').map(p => `${p} (${p.length})`).join(' ')
+    return valor.split(' ').map(p => ``)
 })
 
 new Vue({

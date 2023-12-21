@@ -5,6 +5,6 @@ export default {
         }
     },
     created() {
-        console.log('Created - Usuário Mixin!');
+        console.log('Creatad - Usuário Mixin!');
     }
 }

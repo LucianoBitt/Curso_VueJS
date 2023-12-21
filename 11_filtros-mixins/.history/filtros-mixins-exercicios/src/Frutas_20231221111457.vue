@@ -1,6 +1,5 @@
 <template>
 	<div>
-		<h2>{{ global }}</h2>
 		<ul>
 			<li v-for="fruta in frutas" :key="fruta">{{ fruta }}</li>
 		</ul>
@@ -10,10 +9,9 @@
 
 <script>
 import frutasMixin from '@/frutasMixin'
-import usuarioMixin from '@/usuarioMixin'
 
 export default {
-	mixins: [frutasMixin, usuarioMixin],
+	mixins: [frutasMixin],
 	created() {
         console.log('Created - Frutas.vue!');
     }

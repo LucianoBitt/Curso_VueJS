@@ -8,7 +8,7 @@
 		<p>{{ frase | contar-palavras }}</p>
 		<p>{{ frase | contarPalavras }}</p>
 		<hr>
-		<p>{{ fraseComVirgulas }}</p>
+		<p>{{ fraseComVirgula }}</p>
 		<p>{{ fraseComTamanhos }}</p>
 
 		<!-- Exercício 4 -->
@@ -29,7 +29,7 @@ export default {
 		}
 	},
 	computed: {
-		fraseComVirgulas() {
+		fraseComVirgula() {
 			return this.frase.replace(/\s/g, ',')
 		},
 		fraseComTamanhos() {

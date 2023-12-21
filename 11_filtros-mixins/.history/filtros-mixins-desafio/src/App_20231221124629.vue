@@ -8,8 +8,8 @@
 		<p>{{ frase | contar-palavras }}</p>
 		<p>{{ frase | contarPalavras }}</p>
 		<hr>
-		<p>{{ fraseComVirgulas }}</p>
-		<p>{{ fraseComTamanhos }}</p>
+		<p>{{ frase | frase-com-virgula }}</p>
+		<p>{{ frase | fraseComVirgula }}</p>
 
 		<!-- Exercício 4 -->
 		<!-- Compartilhe a propriedade computada via mixin -->
@@ -29,11 +29,8 @@ export default {
 		}
 	},
 	computed: {
-		fraseComVirgulas() {
+		fraseComVirgula() {
 			return this.frase.replace(/\s/g, ',')
-		},
-		fraseComTamanhos() {
-			return this.frase.split(' ').map(p => `${p} (${p.length})`).join(' ')
 		}
 	}
 }
@@ -47,6 +44,6 @@ export default {
 	text-align: center;
 	color: #2c3e50;
 	margin-top: 60px;
-	font-size: 1.5rem;
+	font-size: 2.5rem;
 }
 </style>
