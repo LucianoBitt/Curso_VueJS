@@ -5,18 +5,12 @@
 		<b-button variant="primary" class="mb-3"
 		@click="exibir = !exibir">Mostrar Mensagem</b-button>
 
-		<transition name="fade" appear>
+		<transition name="fade">
 			<b-alert variant="info" show v-if="exibir">{{ msg }}</b-alert>
 		</transition>
 
-		<transition name="slide" type="animation" appear>
+		<transition name="slide">
 			<b-alert variant="info" show v-if="exibir">{{ msg }}</b-alert>
-		</transition>
-
-		<transition
-			enter-active-class="animated bounce"
-			leave-active-class="animated shake">
-			<b-alert variant="info" show v-show="exibir">{{ msg }}</b-alert>
 		</transition>
 	</div>
 </template>
@@ -39,7 +33,7 @@ export default {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	text-align: center;
-	color: #2c3e50;
+	color: #502c2c;
 	margin-top: 60px;
 	font-size: 1.5rem;
 }
