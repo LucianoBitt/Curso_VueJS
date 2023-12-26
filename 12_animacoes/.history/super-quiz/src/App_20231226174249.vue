@@ -1,12 +1,12 @@
 <template>
 	<div id="app">
 		<h1>Super Quiz</h1>
-		<Question v-if="questionMode" :question="questions[currentQuestion]" />
+		<Question v-if="questionMode" :question="questions[currentQuestions]" />
 	</div>
 </template>
 
 <script>
-import questions from '@/util/questions'
+import questions from '@/util/questions.js'
 import Question from '@/components/Question.vue'
 import Result from '@/components/Result.vue';
 

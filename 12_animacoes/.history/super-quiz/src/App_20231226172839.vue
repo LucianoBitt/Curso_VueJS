@@ -1,12 +1,11 @@
 <template>
 	<div id="app">
 		<h1>Super Quiz</h1>
-		<Question v-if="questionMode" :question="questions[currentQuestion]" />
 	</div>
 </template>
 
 <script>
-import questions from '@/util/questions'
+import Questions from '@/util/questions'
 import Question from '@/components/Question.vue'
 import Result from '@/components/Result.vue';
 
@@ -15,9 +14,6 @@ export default {
 	data() {
 		return {
 			result: false,
-			questionMode: true,
-			questions,
-			currentQuestion: 0
 		}
 	}
 }

@@ -1,7 +1,6 @@
 <template>
 	<div id="app">
 		<h1>Super Quiz</h1>
-		<Question v-if="questionMode" :question="questions[currentQuestion]" />
 	</div>
 </template>
 

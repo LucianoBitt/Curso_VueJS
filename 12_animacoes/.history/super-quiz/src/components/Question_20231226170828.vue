@@ -1,15 +1,9 @@
 <template>
     <div class="question">
-        <span>{{ question.text }}</span>
-        <ul class="answers">
-            <li v-for="(answer, i) in question.answers" :key="answer.text">
-                <span class="number">{{ i + 1 }}</span>
-                <span class="text">{{ answer.text }}</span>
-            </li>
-        </ul>
+        <span>{{  }}</span>
     </div>
 </template>
- 
+
 <script>
 export default {
     props: {

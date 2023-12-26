@@ -1,7 +1,6 @@
 <template>
-    <div class="result" :class="{wrong: !result}">
-        <span v-if="result">Resposta Certa! :) \o/</span>
-        <span v-else>Resposta Errada! :/</span>
+    <div class="result">
+        <span v-if="Resposta Certa! "></span>
     </div>
 </template>
 
@@ -9,7 +8,7 @@
 export default {
     props: {
         result: {
-            type: Boolean,
+            type: Bollean,
             required: true
         }
     }
