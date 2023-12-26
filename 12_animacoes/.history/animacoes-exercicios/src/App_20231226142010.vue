@@ -5,7 +5,7 @@
 		<b-button variant="primary" class="mb-3"
 		@click="exibir = !exibir">Mostrar Mensagem</b-button>
 
-		<transition name="fade" appear>
+		<!-- <transition name="fade" appear>
 			<b-alert variant="info" show v-if="exibir">{{ msg }}</b-alert>
 		</transition>
 
@@ -17,7 +17,7 @@
 			enter-active-class="animated bounce"
 			leave-active-class="animated shake">
 			<b-alert variant="info" show v-show="exibir">{{ msg }}</b-alert>
-		</transition>
+		</transition> -->
 		
 		<hr>
 		<b-select v-model="tipoAnimacao" class="mb-3">
@@ -44,25 +44,6 @@
 			@leave-cancelled="leaveCancelled">
 			<div v-if="exibir2" class="caixa"></div>
 		</transition>
-
-		<hr>
-		<div class="mb-3">
-			<b-button variant="secondary" class="mr-2"
-				@click="componenteSelecionado = 'AlertaInfo'">Info</b-button>
-			<b-button variant="danger" 
-				@click="componenteSelecionado = 'AlertaAdvertencia'">Aviso</b-button>
-		</div>
-		<transition name="fade" mode="out-in">
-			<component :is="componenteSelecionado"></component>
-		</transition>
-
-		<hr>
-		<b-button @click="adicionarAluno" class="mb-3">Adicionar Aluno</b-button>
-		<transition-group name="slide" tag="div">
-			<b-list-group v-for="(aluno, i) in alunos" :key="aluno">
-				<b-list-group-item @click="removerAluno(i)">{{ aluno }}</b-list-group-item>
-			</b-list-group>
-		</transition-group>
 	</div>
 </template>
 
@@ -71,26 +52,17 @@ import AlertaAdvertencia from '@/AlertaAdvertencia.vue'
 import AlertaInfo from '@/AlertaInfo.vue'
 
 export default {
-	components: { AlertaAdvertencia, AlertaInfo},
+	components: { AlertaAdvertencia, AlertaInfo}
 	data() {
 		return {
-			alunos: ['Luciano', 'Stefania', 'Vitória', 'Rafael'],
 			msg: 'Mensagem de informação para o usuário!',
 			exibir: false,
 			exibir2: true,
 			tipoAnimacao: 'fade',
-			larguraBase: 0,
-			componenteSelecionado: 'AlertaInfo'
+			larguraBase: 0
 		}
 	},
 	methods: {
-		adicionarAluno() {
-			const s = Math.random().toString(36).substring(2)
-			this.alunos.push(s)
-		},
-		removerAluno(indice) {
-			this.alunos.splice(indice, 1)
-		},
 		animar(el, done, negativo) {
 			let rodada = 1
 			const temporizador = setInterval(() => {
@@ -175,17 +147,11 @@ export default {
 }
 
 .slide-leave-active {
-	position: absolute;
-	width: 100%;
 	animation: slide-out 2s ease;
 	transition: opacity 2s;
 }
 
 .slide-enter, .slide-leave-to {
 	opacity: 0;
-}
-
-.slide-move {
-	transition: transform 1s;
 }
 </style>
