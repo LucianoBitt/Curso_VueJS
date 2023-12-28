@@ -5,7 +5,7 @@
 			:question="questions[currentQuestion]"
 			@answered="showResult" />
 		<Result v-else :result="result"
-			@confirmed="nextQuestion" />
+		@confir />
 	</div>
 </template>
 

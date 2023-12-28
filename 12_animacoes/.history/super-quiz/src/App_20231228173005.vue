@@ -3,9 +3,8 @@
 		<h1>Super Quiz</h1>
 		<Question v-if="questionMode"
 			:question="questions[currentQuestion]"
-			@answered="showResult" />
-		<Result v-else :result="result"
-			@confirmed="nextQuestion" />
+			@answered="result" />
+		<Result v-else :result="result" />
 	</div>
 </template>
 

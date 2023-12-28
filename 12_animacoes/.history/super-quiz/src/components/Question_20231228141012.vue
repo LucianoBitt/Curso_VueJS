@@ -3,7 +3,7 @@
         <span>{{ question.text }}</span>
         <ul class="answers">
             <li v-for="(answer, i) in question.answers" :key="answer.text"
-            @click="$emit('answered', answer.correct)">
+            @click="$emit('answered')">
                 <span class="number">{{ i + 1 }}</span>
                 <span class="text">{{ answer.text }}</span>
             </li>

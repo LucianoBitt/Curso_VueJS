@@ -4,8 +4,7 @@
 		<Question v-if="questionMode"
 			:question="questions[currentQuestion]"
 			@answered="showResult" />
-		<Result v-else :result="result"
-			@confirmed="nextQuestion" />
+		<Result v-else :result="result" />
 	</div>
 </template>
 
