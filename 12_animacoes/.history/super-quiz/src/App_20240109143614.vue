@@ -31,7 +31,8 @@ export default {
 		showResult(result) {
 			this.result = result
 			this.questionMode = false
-		},
+		}
+	},
 		nextQuestion() {
 			let r = Math.random() * this.questions.length
 			this.currentQuestion = parseInt(r)

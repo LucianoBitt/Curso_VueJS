@@ -31,12 +31,12 @@ export default {
 		showResult(result) {
 			this.result = result
 			this.questionMode = false
-		},
+		}
+	},
 		nextQuestion() {
-			let r = Math.random() * this.questions.length
-			this.currentQuestion = parseInt(r)
-			this.questionMode = true
-		},
+		let r = Math.random() * this.questions.length
+		this.currentQuestion = parseInt(r)
+		this.questionMode = true
 	}
 }
 </script>

@@ -21,7 +21,7 @@ export default {
 	components: { Question, Result },
 	data() {
 		return {
-			result: true,
+			result: false,
 			questionMode: true,
 			questions,
 			currentQuestion: 0
@@ -31,12 +31,12 @@ export default {
 		showResult(result) {
 			this.result = result
 			this.questionMode = false
-		},
-		nextQuestion() {
-			let r = Math.random() * this.questions.length
-			this.currentQuestion = parseInt(r)
-			this.questionMode = true
-		},
+		}
+	},
+	nextQuestion() {
+		let r = Math.random() * this.question.length
+		this.currentQuestion = parseInt(r)
+		this.questionMode = true
 	}
 }
 </script>
