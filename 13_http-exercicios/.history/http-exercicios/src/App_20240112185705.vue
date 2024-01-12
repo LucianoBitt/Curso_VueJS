@@ -23,11 +23,7 @@
 		</b-card>
 		<hr>
 		<b-list-group>
-			<b-list-group-item v-for="(usuario, id) in usuarios" :key="id">
-				<strong>Nome: </strong> {{ usuario.nome }} <br>
-				<strong>E-mail: </strong> {{ usuario.email }} <br>
-				<strong>ID: </strong> {{ id }}
-			</b-list-group-item>
+			b-list-
 		</b-list-group>
 	</div>
 </template>

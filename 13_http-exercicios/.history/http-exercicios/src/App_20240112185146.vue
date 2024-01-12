@@ -21,14 +21,6 @@
 				size="lg" variant="success"
 				class="ml-2">Obter Usuários</b-button>
 		</b-card>
-		<hr>
-		<b-list-group>
-			<b-list-group-item v-for="(usuario, id) in usuarios" :key="id">
-				<strong>Nome: </strong> {{ usuario.nome }} <br>
-				<strong>E-mail: </strong> {{ usuario.email }} <br>
-				<strong>ID: </strong> {{ id }}
-			</b-list-group-item>
-		</b-list-group>
 	</div>
 </template>
 
@@ -52,9 +44,7 @@ export default {
 				})
 		},
 		obterUsuarios() {
-			this.$http.get('usuarios.json').then(res => {
-				this.usuarios = res.data
-			})
+			
 		}
 	}
 	// created() {
