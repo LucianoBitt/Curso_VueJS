@@ -66,12 +66,10 @@ export default {
 		excluir(id) {
 			this.$http.delete(`/usuarios/${id}.json`)
 				.then(() => this.limpar())
-				.catch(err => {
-					this.mensagens.push({
-						texto: 'Problema para excluir!',
-						tipo: 'danger'
-					})
-				})	
+				.catch(() => {
+					texto: 'Problema para excluir!'
+					tipo: 'danger'
+				})
 		},
 		salvar() {
 			const metodo = this.id ? 'patch' : 'post'

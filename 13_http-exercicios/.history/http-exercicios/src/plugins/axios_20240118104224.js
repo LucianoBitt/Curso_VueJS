@@ -11,7 +11,9 @@ Vue.use({
         Vue.prototype.$http = axios.create({
             baseURL: 'https://curso-vue-bitt-default-rtdb.firebaseio.com/',
             headers: {
-                "Authorization": "abc123"
+                get: {
+                    "Authorization": "abc123"
+                }
             }
         })
 

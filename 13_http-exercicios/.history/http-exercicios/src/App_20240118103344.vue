@@ -1,9 +1,6 @@
 <template>
 	<div id="app" class="container">
 		<h1>HTTP com Axios</h1>
-		<b-alert show dismissible v-for="mensagem in mensagens"
-			:key="mensagem.texto"
-			:variant="mensagem.tipo">{{ mensagem.texto }}</b-alert>
 		<hr>
 		<h2>Firebase</h2>
 		<b-card>
@@ -29,11 +26,7 @@
 			<b-list-group-item v-for="(usuario, id) in usuarios" :key="id">
 				<strong>Nome: </strong> {{ usuario.nome }} <br>
 				<strong>E-mail: </strong> {{ usuario.email }} <br>
-				<strong>ID: </strong> {{ id }}<br>
-				<b-button variant="warning" size="lg"
-				@click="carregar(id)">Carregar</b-button>
-				<b-button variant="danger" size="lg" class="ml-2"
-				@click="excluir(id)">Excluir</b-button>
+				<strong>ID: </strong> {{ id }}
 			</b-list-group-item>
 		</b-list-group>
 	</div>
@@ -43,9 +36,7 @@
 export default {
 	data() {
 		return {
-			mensagens: [],
 			usuarios: [],
-			id: null,
 			usuario: {
 				nome: '',
 				email: ''
@@ -53,36 +44,11 @@ export default {
 		}
 	},
 	methods: {
-		limpar() {
-			this.usuario.nome = ''
-			this.usuario.email = ''
-			this.id = null
-			this.mensagens = []
-		},
-		carregar(id) {
-			this.id = id
-			this.usuario = { ...this.usuarios[id] }
-		},
-		excluir(id) {
-			this.$http.delete(`/usuarios/${id}.json`)
-				.then(() => this.limpar())
-				.catch(err => {
-					this.mensagens.push({
-						texto: 'Problema para excluir!',
-						tipo: 'danger'
-					})
-				})	
-		},
 		salvar() {
-			const metodo = this.id ? 'patch' : 'post'
-			const finalUrl = this.id ? `/${this.id}.json` : '.json'
-			this.$http[metodo](`/usuarios${finalUrl}`, this.usuario)
-				.then(() => {
-					this.limpar()
-					this.mensagens.push({
-						texto: 'Operação realizada com sucesso!',
-						tipo: 'success'
-					})
+			this.$http.post('usuarios.json', this.usuario)
+				.then(resp => {
+					this.usuario.nome = ''
+					this.usuario.email = ''
 				})
 		},
 		obterUsuarios() {

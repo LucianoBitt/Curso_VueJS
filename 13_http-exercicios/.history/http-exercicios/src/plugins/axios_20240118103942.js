@@ -2,17 +2,14 @@ import Vue from 'vue'
 import axios from 'axios'
 
 axios.defaults.baseURL = 'https://curso-vue-bitt-default-rtdb.firebaseio.com/'
-    // axios.defaults.headers.common['Authorization'] = '123abc'
-    // axios.defaults.headers.get['Accepts'] = 'application/json'
+axios.defaults.headers.common['Authorization'] = '123abc'
+axios.defaults.headers.get['Accepts'] = ''
 
 Vue.use({
     install(Vue) {
         // Vue.prototype.$http = axios
         Vue.prototype.$http = axios.create({
-            baseURL: 'https://curso-vue-bitt-default-rtdb.firebaseio.com/',
-            headers: {
-                "Authorization": "abc123"
-            }
+            baseURL: 'https://curso-vue-bitt-default-rtdb.firebaseio.com/'
         })
 
         Vue.prototype.$http.interceptors.request.use(config => {
