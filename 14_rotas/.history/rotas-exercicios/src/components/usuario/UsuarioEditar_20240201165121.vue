@@ -19,6 +19,6 @@ export default {
 
 <style>
 	#rodape {
-		margin-top: 1000px;
+		margin
 	}
 </style>

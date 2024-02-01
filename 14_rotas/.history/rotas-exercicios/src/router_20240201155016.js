@@ -12,15 +12,6 @@ Vue.use(Router)
 
 export default new Router({
     mode: 'history',
-    scrollBehavior(to, from, savedPosition) {
-        if (savedPosition) {
-            return savedPosition
-        } else if (to.hash) {
-            return { selector: to.hash }
-        } else {
-            return { x: 0, y: 0 }
-        }
-    },
     routes: [{
         name: 'inicio',
         path: '/',
@@ -34,8 +25,7 @@ export default new Router({
         // component: Usuario,
         components: {
             default: Usuario,
-            menu: MenuAlt,
-            menuInferior: MenuAlt
+            menu: MenuAlt
         },
         props: true,
         children: [
@@ -43,11 +33,5 @@ export default new Router({
             { path: ':id', component: UsuarioDetalhe, props: true },
             { path: ':id/editar', component: UsuarioEditar, props: true, name: 'editarUsuario' },
         ]
-    }, {
-        path: '/redirecionar',
-        redirect: '/usuario'
-    }, {
-        path: '*',
-        redirect: '/'
     }]
 })

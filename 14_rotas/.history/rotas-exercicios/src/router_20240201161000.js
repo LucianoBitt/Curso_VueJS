@@ -12,15 +12,6 @@ Vue.use(Router)
 
 export default new Router({
     mode: 'history',
-    scrollBehavior(to, from, savedPosition) {
-        if (savedPosition) {
-            return savedPosition
-        } else if (to.hash) {
-            return { selector: to.hash }
-        } else {
-            return { x: 0, y: 0 }
-        }
-    },
     routes: [{
         name: 'inicio',
         path: '/',
@@ -47,7 +38,7 @@ export default new Router({
         path: '/redirecionar',
         redirect: '/usuario'
     }, {
-        path: '*',
-        redirect: '/'
+        path: '/redirecionar',
+        redirect: '/usuario'
     }]
 })
