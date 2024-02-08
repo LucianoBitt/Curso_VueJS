@@ -12,13 +12,13 @@ import MenuAlt from '@/components/template/MenuAlt'
 Vue.use(Router)
 
 const Usuario = () =>
-    import ( /* webpackChunkName: "usuario"*/ './components/usuario/Usuario')
+    import ('./components/usuario/Usuario')
 const UsuarioLista = () =>
-    import ( /* webpackChunkName: "usuario"*/ './components/usuario/UsuarioLista')
+    import ('./components/usuario/UsuarioLista')
 const UsuarioDetalhe = () =>
-    import ( /* webpackChunkName: "usuario"*/ './components/usuario/UsuarioDetalhe')
+    import ('./components/usuario/UsuarioDetalhe')
 const UsuarioEditar = () =>
-    import ( /* webpackChunkName: "usuario"*/ './components/usuario/UsuarioEditar')
+    import ('./components/usuario/UsuarioEditar')
 
 const router = new Router({
     mode: 'history',

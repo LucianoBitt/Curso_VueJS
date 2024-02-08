@@ -16,12 +16,12 @@
 export default {
 	props: ['id'],
 	beforeRouteEnter(to, from, next) {
-		console.log('dentro do componente => usuário detalhe')
+		// console.log('dentro do componente => usuário detalhe')
 		// next(vm => {
 		// 	console.log(vm.id)
 		// })
 		const autenticado = true
-		autenticado ? next() : next(false)
+		autenticado ? next() : nexte(false)
 	}
 	// data() {
 	// 	return {

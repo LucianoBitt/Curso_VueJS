@@ -14,11 +14,11 @@ Vue.use(Router)
 const Usuario = () =>
     import ( /* webpackChunkName: "usuario"*/ './components/usuario/Usuario')
 const UsuarioLista = () =>
-    import ( /* webpackChunkName: "usuario"*/ './components/usuario/UsuarioLista')
+    import ( /* webpackChunkName: "usuarioLista"*/ './components/usuario/UsuarioLista')
 const UsuarioDetalhe = () =>
-    import ( /* webpackChunkName: "usuario"*/ './components/usuario/UsuarioDetalhe')
+    import ( /* webpackChunkName: "usuarioDetalhe"*/ './components/usuario/UsuarioDetalhe')
 const UsuarioEditar = () =>
-    import ( /* webpackChunkName: "usuario"*/ './components/usuario/UsuarioEditar')
+    import ( /* webpackChunkName: "usuarioEditar"*/ './components/usuario/UsuarioEditar')
 
 const router = new Router({
     mode: 'history',
