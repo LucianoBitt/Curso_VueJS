@@ -14,11 +14,11 @@ export default {
         total() {
             return this.produtos.map(p => p.quantidade * p.preco)
                 .reduce((total, atual) => total + atual, 0)
-        },
-        produtos() {
-            return this.$store.state.produtos
         }
-    }    
+    },
+    produtos() {
+        return this.$store.state.produtos
+    }
 }
 </script>
 

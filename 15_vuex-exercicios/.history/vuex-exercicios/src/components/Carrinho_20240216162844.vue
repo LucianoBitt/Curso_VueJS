@@ -33,7 +33,7 @@ export default {
                 .reduce((total, atual) => total + atual, 0)
         },
         produtos() {
-            return this.$store.state.produtos
+            return this.store
         }
     }
 }

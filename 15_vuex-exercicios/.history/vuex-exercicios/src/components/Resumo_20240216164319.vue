@@ -17,8 +17,7 @@ export default {
         },
         produtos() {
             return this.$store.state.produtos
-        }
-    }    
+        }    
 }
 </script>
 
