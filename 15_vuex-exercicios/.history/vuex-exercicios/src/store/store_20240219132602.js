@@ -12,9 +12,8 @@ export default new Vuex.Store({
         ]
     },
     getters: {
-        valorTotal(state) {
-            return state.produtos.map(p => p.quantidade * p.preco)
-                .reduce((total, atual) => total + atual, 0)
+        valorTotoal(state) {
+
         }
     }
 })
