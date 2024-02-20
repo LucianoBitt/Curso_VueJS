@@ -26,11 +26,9 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
-
 export default {
     computed: {
-        ...mapGetters({
+        mapGetters({
             total: 'valorTotal'
         }),
         // total() {

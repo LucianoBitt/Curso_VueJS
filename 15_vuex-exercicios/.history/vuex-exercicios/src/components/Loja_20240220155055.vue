@@ -18,7 +18,7 @@ export default {
         return {
             sequencia: 1,
             quantidade: 1,
-            preco: 1.99,
+            preco: 9.99,
         }
     },
     methods: {
@@ -34,8 +34,8 @@ export default {
 
             // this.$store.state.produtos.push(produto)
             // this.$store.commit('adicionarProduto', produto)
-            // this.$store.dispatch('adicionarProduto', produto)
-            this.adicionarProduto(produto)
+            // this.adicionarProduto(produto)
+            this.$store.dispatch('adicionarProduto', produto)
         }
     }
 }

@@ -18,7 +18,7 @@ export default {
         return {
             sequencia: 1,
             quantidade: 1,
-            preco: 1.99,
+            preco: 1.00,
         }
     },
     methods: {
