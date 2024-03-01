@@ -23,14 +23,6 @@ export default {
             set(valor) {
                 this.$store.commit('setQuantidade', valor)
             }
-        },
-        preco: {
-            get() {
-                return this.$store.state.preco
-            },
-            set(valor) {
-                this.$store.commit('setPreco', valor)
-            }
         }
     }
 }

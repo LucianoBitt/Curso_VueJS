@@ -16,7 +16,7 @@ import { mapActions } from 'vuex'
 export default {
     data() {
         return {
-            sequencia: 1
+            sequencia: 1,
         }
     },
     computed: {

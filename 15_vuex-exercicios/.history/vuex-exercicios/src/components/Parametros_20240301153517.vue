@@ -28,8 +28,8 @@ export default {
             get() {
                 return this.$store.state.preco
             },
-            set(valor) {
-                this.$store.commit('setPreco', valor)
+            set(preco) {
+                
             }
         }
     }

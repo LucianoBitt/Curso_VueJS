@@ -16,7 +16,9 @@ import { mapActions } from 'vuex'
 export default {
     data() {
         return {
-            sequencia: 1
+            sequencia: 1,
+            quantidade: 1,
+            preco: 1.99,
         }
     },
     computed: {
@@ -24,7 +26,7 @@ export default {
             return this.$store.state.quantidade
         },
         preco() {
-            return this.$store.state.preco
+            this.$store.commit('')
         }
     },
     methods: {

@@ -6,8 +6,8 @@ Vue.use(Vuex)
 export default new Vuex.Store({
     state: {
         produtos: [],
-        quantidade: 2,
-        preco: 2.99
+        quantidade: 0,
+        preco: 0
     },
     getters: {
         valorTotal(state) {
