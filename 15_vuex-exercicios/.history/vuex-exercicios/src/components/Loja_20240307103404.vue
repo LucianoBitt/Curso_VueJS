@@ -24,11 +24,11 @@ export default {
             return this.$store.state.parametros.quantidade
         },
         preco() {
-            return this.$store.state.parametros.preco
+            return this.$store.state.preco
         }
     },
     methods: {
-        ...mapActions('carrinho', ['adicionarProduto']),
+        ...mapActions(['adicionarProduto']),
         // adicionarProduto(produto) {
         //     this.$store.dispatch('adicionarProduto', produto)
         // },
@@ -45,9 +45,6 @@ export default {
             // this.$store.commit('adicionarProduto', produto)
             // this.$store.dispatch('adicionarProduto', produto)
             this.adicionarProduto(produto)
-
-            console.log(this.$store.getters.getNome)
-            console.log(this.$store.getters.getNomeCompleto);
         }
     }
 }

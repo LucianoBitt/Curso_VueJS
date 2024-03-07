@@ -28,7 +28,7 @@ export default {
         }
     },
     methods: {
-        ...mapActions('carrinho', ['adicionarProduto']),
+        ...mapActions(['adicionarProduto']),
         // adicionarProduto(produto) {
         //     this.$store.dispatch('adicionarProduto', produto)
         // },

@@ -10,9 +10,8 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
     state: {
-        nome: 'Luciano ',
+        nome: 'Luciano',
         sobrenome: 'Bittencourt',
     },
-    getters,
     modules: { carrinho, parametros }
 })
